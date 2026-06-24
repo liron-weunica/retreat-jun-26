@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>התוכנית · שֹׁרֶשׁ</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">שׁ</div>
+      <div><div class="brand-name">שֹׁרֶשׁ</div><div class="brand-sub">אדמה · מים · אוויר</div></div>
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav class="menu" id="menu">
+      <a href="index.html">בית</a>
+      <a href="program.html" class="active">התוכנית</a>
+      <a href="facilitators.html">המנחים</a>
+      <a href="location.html">המקום</a>
+      <a href="testimonials.html">המלצות</a>
+      <a href="reservation.html" class="cta">ההזמנה שלך</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <p class="eyebrow">ת ו כ נ י ת   ה ר י ט ר י ט</p>
+  <h1>ארבעה ימים, מסע אחד</h1>
+  <p>כל יום מוקדש ליסוד אחר, ובונה על שקדם לו. הנה מה שמחכה לך, שעה אחר שעה.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="day-tabs">
+      <button class="day-tab active" onclick="showDay(1,this)">יום 1 · אֲדָמָה</button>
+      <button class="day-tab" onclick="showDay(2,this)">יום 2 · מַיִם</button>
+      <button class="day-tab" onclick="showDay(3,this)">יום 3 · אֲוִיר</button>
+      <button class="day-tab" onclick="showDay(4,this)">יום 4 · אִיחוּד</button>
+    </div>
+
+    <!-- יום 1 -->
+    <div class="day-panel active" id="day1">
+      <div class="section-head"><h2>יום ראשון — הורדת שורשים</h2><p>היום הראשון עוסק בהגעה, בהשהיה ובחיבור מחדש אל הקרקע. נשחרר את העיר, ונרגיש את כפות הרגליים.</p></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">15:00</div><div class="tl-body"><h4>הגעה וקבלת פנים</h4><p>תה צמחי מקומי, סיור באתר ובחירת האוהל שלך. הנחת הטלפונים בתיבת השקט.</p><span class="tl-tag tag-earth">אדמה</span></div></div>
+        <div class="tl-item"><div class="tl-time">17:00</div><div class="tl-body"><h4>מעגל פתיחה</h4><p>היכרות עם הקבוצה והמנחים, הצבת כוונה אישית למסע, וטקס פתיחת המעגל.</p><span class="tl-tag tag-earth">אדמה</span></div></div>
+        <div class="tl-item"><div class="tl-time">18:30</div><div class="tl-body"><h4>הליכת אדמה יחפה</h4><p>הליכה מודרכת בשקט על החול בשעת בין הערביים, עם תרגול קשב לחושים.</p><span class="tl-tag tag-earth">אדמה</span></div></div>
+        <div class="tl-item"><div class="tl-time">20:00</div><div class="tl-body"><h4>ארוחת ערב סביב האש</h4><p>ארוחה צמחית חמה בבישול שף, ושיחה פתוחה תחת השמיים.</p></div></div>
+        <div class="tl-item"><div class="tl-time">21:30</div><div class="tl-body"><h4>מדיטציית שורש לשינה</h4><p>תרגול הרפיה והארקה עדין לקראת לילה ראשון במדבר.</p><span class="tl-tag tag-earth">אדמה</span></div></div>
+      </div>
+    </div>
+
+    <!-- יום 2 -->
+    <div class="day-panel" id="day2">
+      <div class="section-head"><h2>יום שני — זרימת המים</h2><p>יום המוקדש לרגש ולזרימה. עבודה עדינה ומכבדת לשחרור התנגדויות, ריכוך וחיבור מחדש אל הגמישות הפנימית — לבד ובזוגות, במרחב בטוח.</p></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">06:30</div><div class="tl-body"><h4>תרגול בוקר עם הזריחה</h4><p>תנועה אינטואיטיבית רכה על הדיונה מול השמש העולה.</p><span class="tl-tag tag-air">אוויר</span></div></div>
+        <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-body"><h4>ארוחת בוקר משדה אל הצלחת</h4><p>בופה צמחי עשיר, פירות העונה ותה צמחים.</p></div></div>
+        <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-body"><h4>סדנה: "זרימה" — תנועה ומים</h4><p>תרגול תנועתי רך וטבילה מינרלית לשחרור מתח והקשבה לגוף. כל אחת בקצב שלה.</p><span class="tl-tag tag-water">מים</span></div></div>
+        <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-body"><h4>ארוחת צהריים וזמן חופשי</h4><p>מנוחה בהמוק, צלילה לבריכת הבוץ הטבעית, או שיחה אישית.</p></div></div>
+        <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-body"><h4>סדנה: "מעגל הלב הפתוח"</h4><p>שיתוף מעגלי מודרך על גבולות, רצון וקבלה עצמית, בליווי מנחה מוסמכת.</p><span class="tl-tag tag-water">מים</span></div></div>
+        <div class="tl-item"><div class="tl-time">20:00</div><div class="tl-body"><h4>ארוחת ערב חגיגית</h4><p>ארוחה מיוחדת ולאחריה ערב שירה חופשית סביב המדורה.</p></div></div>
+      </div>
+    </div>
+
+    <!-- יום 3 -->
+    <div class="day-panel" id="day3">
+      <div class="section-head"><h2>יום שלישי — נשימת המרחב</h2><p>יום של אוויר, שחרור וניקוי. עבודת נשימה עמוקה שמאפשרת לרגש הישן לעבור ולהשתחרר.</p></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">06:30</div><div class="tl-body"><h4>מדיטציית שתיקה בזריחה</h4><p>חצי שעה של שקט מוחלט מול נוף המדבר.</p><span class="tl-tag tag-air">אוויר</span></div></div>
+        <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-body"><h4>ארוחת בוקר קלה</h4><p>ארוחה מותאמת לפני עבודת הנשימה.</p></div></div>
+        <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-body"><h4>סדנה: נשימה מעגלית (Breathwork)</h4><p>מסע נשימתי בן שעתיים בליווי מוזיקה חיה ומנחה, לשחרור עמוק.</p><span class="tl-tag tag-air">אוויר</span></div></div>
+        <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-body"><h4>ארוחת צהריים וזמן עיכול שקט</h4><p>זמן מנוחה ארוך לאחר תהליך עוצמתי.</p></div></div>
+        <div class="tl-item"><div class="tl-time">17:00</div><div class="tl-body"><h4>סדנת קול ושירת מעגל</h4><p>שחרור הקול, ניגונים וטונים, פתיחת הגרון והלב.</p><span class="tl-tag tag-air">אוויר</span></div></div>
+        <div class="tl-item"><div class="tl-time">20:30</div><div class="tl-body"><h4>טקס אש וכוונות</h4><p>כתיבת מה שאנחנו משחררות ומסירה אל המדורה.</p></div></div>
+      </div>
+    </div>
+
+    <!-- יום 4 -->
+    <div class="day-panel" id="day4">
+      <div class="section-head"><h2>יום רביעי — איחוד וחזרה</h2><p>היום האחרון מחבר את שלושת היסודות לכדי שלם אחד, ומכין אותנו לחזרה אל החיים — אבל קצת אחרת.</p></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">07:00</div><div class="tl-body"><h4>תרגול שלושת היסודות</h4><p>רצף מסכם המשלב הארקה, חיוניות ונשימה.</p><span class="tl-tag tag-earth">אדמה</span> <span class="tl-tag tag-water">מים</span> <span class="tl-tag tag-air">אוויר</span></div></div>
+        <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-body"><h4>ארוחת בוקר חגיגית</h4><p>ארוחת פרידה משותפת.</p></div></div>
+        <div class="tl-item"><div class="tl-time">11:00</div><div class="tl-body"><h4>מעגל סיכום והטמעה</h4><p>שיתוף תובנות, חידוד הכוונה, וקבלת "עוגן" אישי לדרך.</p></div></div>
+        <div class="tl-item"><div class="tl-time">12:30</div><div class="tl-body"><h4>טקס סגירה ופרידה</h4><p>סגירת המעגל, חיבוקים, והבטחה קטנה לעצמך.</p></div></div>
+        <div class="tl-item"><div class="tl-time">13:30</div><div class="tl-body"><h4>פיזור</h4><p>יוצאות לדרך עם לב פתוח ושורשים עמוקים יותר.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--sand)">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>הכוונה כבר הוצבה</h2>
+      <p>המקום שלך במחזור הקרוב מאושר. הצצי בפרטים המלאים של ההזמנה שלך.</p>
+      <a href="reservation.html" class="btn btn-primary">להזמנה שלך ←</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-bottom">© 2026 שֹׁרֶשׁ ריטריטים · כל הזכויות שמורות · עוצב באהבה במדבר</div>
+  </div>
+</footer>
+
+<script>
+function showDay(n, el){
+  document.querySelectorAll('.day-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.day-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('day'+n).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>

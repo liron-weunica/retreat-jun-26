@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ההזמנה שלך · שֹׁרֶשׁ</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* קונפטי */
+  .confetti-piece{position:fixed;top:-10px;width:10px;height:16px;opacity:.9;z-index:60;animation:fall linear forwards}
+  @keyframes fall{to{transform:translateY(105vh) rotate(720deg);opacity:1}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">שׁ</div>
+      <div><div class="brand-name">שֹׁרֶשׁ</div><div class="brand-sub">אדמה · מים · אוויר</div></div>
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav class="menu" id="menu">
+      <a href="index.html">בית</a>
+      <a href="program.html">התוכנית</a>
+      <a href="facilitators.html">המנחים</a>
+      <a href="location.html">המקום</a>
+      <a href="testimonials.html">המלצות</a>
+      <a href="reservation.html" class="cta active">ההזמנה שלך</a>
+    </nav>
+  </div>
+</header>
+
+<div class="reveal-stage" id="stage">
+
+  <!-- כרטיס אישור ההזמנה (השלב ה"רציני") -->
+  <div class="confirm-card" id="confirmCard">
+    <div class="confirm-top">
+      <div class="check">✓</div>
+      <h2>ההזמנה שלך אושרה</h2>
+      <div style="opacity:.9;font-size:14px;margin-top:4px">מחזור קיץ 2026 · שֹׁרֶשׁ</div>
+    </div>
+    <div class="confirm-body">
+      <div class="confirm-row"><span class="k">על שם</span><span class="v">איילת גולן</span></div>
+      <div class="confirm-row"><span class="k">מספר אישור</span><span class="v">SHRSH-47-0624</span></div>
+      <div class="confirm-row"><span class="k">תאריכים</span><span class="v">ד׳–א׳ · 4 ימים, 3 לילות</span></div>
+      <div class="confirm-row"><span class="k">מיקום</span><span class="v">נווה חריף, ערבה תיכונה</span></div>
+      <div class="confirm-row"><span class="k">חבילה</span><span class="v">אוהל גלמפינג פרטי · יחיד</span></div>
+      <div class="confirm-row"><span class="k">סטטוס תשלום</span><span class="v" style="color:var(--sage)">שולם במלואו ✓</span></div>
+      <div class="confirm-row"><span class="k">נרכש על ידי</span><span class="v">מתנה 🎁 (פרטים בהמשך)</span></div>
+
+      <p class="confirm-note">המקום שלך מאובטח. כדי להשלים את ההרשמה ולצפות במכתב האישי שצורף להזמנה, לחצי על הכפתור למטה.</p>
+
+      <button class="btn btn-primary btn-reveal" id="revealBtn" onclick="boom()">
+        צפי בפרטים הסופיים והמכתב האישי ←
+      </button>
+    </div>
+  </div>
+
+  <!-- הגילוי (ה"בום") -->
+  <div id="bomb">
+    <div class="confetti-emoji">🎉</div>
+    <h1>מזל טוב, איילת!</h1>
+    <div class="big-num">47</div>
+    <p><strong>נמתחת.</strong> 😄 אין שום ריטריט במדבר, אין אוהל גלמפינג, ואין בריכת בוץ.</p>
+    <p>אבל יש משהו הרבה יותר טוב: מישהו שאוהב אותך מספיק כדי לבנות לך אתר שלם רק כדי לראות את הפרצוף שלך עכשיו. 🙃</p>
+    <p style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(20px,3vw,28px);color:var(--gold);margin-top:26px">
+      יום הולדת 47 שמח! ❤️<br>המתנה האמיתית מחכה לך — בעולם האמיתי.
+    </p>
+    <p style="font-size:15px;opacity:.8;margin-top:30px">
+      (אדמה, מים ואוויר? פשוט רציתי לראות עד איזה עמוד תגיעי לפני שנפל האסימון.)
+    </p>
+    <a href="index.html" class="btn btn-primary" style="margin-top:24px;background:var(--sand-light);color:var(--ink)">חזרה להתחלה (אם בא לך לעבור על זה שוב 😅)</a>
+  </div>
+
+</div>
+
+<script>
+function boom(){
+  document.getElementById('confirmCard').style.display='none';
+  document.getElementById('bomb').classList.add('show');
+  document.getElementById('stage').classList.add('boom');
+  launchConfetti();
+}
+function launchConfetti(){
+  const colors=['#c9a14a','#b5623c','#6f7a5a','#f5eee0','#a23b59','#fff'];
+  for(let i=0;i<120;i++){
+    const c=document.createElement('div');
+    c.className='confetti-piece';
+    c.style.left=(Math.random()*100)+'vw';
+    c.style.background=colors[i%colors.length];
+    c.style.animationDuration=(2.5+Math.random()*2.5)+'s';
+    c.style.animationDelay=(Math.random()*1.5)+'s';
+    c.style.transform='rotate('+(Math.random()*360)+'deg)';
+    if(i%3===0){c.style.borderRadius='50%';c.style.width='12px';c.style.height='12px';}
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),6000);
+  }
+}
+</script>
+</body>
+</html>
