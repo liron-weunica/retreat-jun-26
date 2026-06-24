@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>אישור הזמנה · שֹׁרֶשׁ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap');
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 210mm; min-height: 297mm; }
+body {
+  font-family: 'Heebo', sans-serif; direction: rtl; color: #2a2520;
+  background: #f5eee0;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.page { width: 210mm; min-height: 297mm; padding: 0; position: relative; overflow: hidden; }
+
+/* כותרת */
+.top {
+  background:
+    linear-gradient(180deg, rgba(20,18,16,0.45), rgba(40,28,18,0.6)),
+    radial-gradient(120% 120% at 50% -20%, #d9a86b, #b5623c 45%, #5a2f22);
+  color: #f5eee0; text-align: center; padding: 46px 40px 40px;
+  position: relative;
+}
+.top .stars {
+  position:absolute; inset:0; opacity:.5;
+  background-image:
+    radial-gradient(1.4px 1.4px at 18% 35%, #fff, transparent),
+    radial-gradient(1.4px 1.4px at 72% 22%, #fff, transparent),
+    radial-gradient(1px 1px at 45% 60%, #fff, transparent),
+    radial-gradient(1.4px 1.4px at 86% 48%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 18%, #fff, transparent);
+}
+.mark {
+  width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 14px;
+  background: radial-gradient(circle at 30% 30%, #b5623c, #8c4427);
+  display:grid; place-items:center; color:#f5eee0;
+  font-family:'Frank Ruhl Libre',serif; font-weight:900; font-size:32px;
+  box-shadow: inset 0 -3px 8px rgba(0,0,0,.25); position:relative; z-index:2;
+}
+.brand { font-family:'Frank Ruhl Libre',serif; font-weight:900; font-size:34px; letter-spacing:2px; position:relative; z-index:2;}
+.brand-sub { font-size:12px; letter-spacing:6px; opacity:.9; margin-top:2px; position:relative; z-index:2;}
+.top h1 { font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:24px; margin-top:22px; position:relative; z-index:2;}
+.top .conf-line { font-size:13px; letter-spacing:1px; opacity:.92; margin-top:6px; position:relative; z-index:2;}
+
+/* גוף */
+.body { padding: 36px 46px 0; }
+.greet { text-align:center; margin-bottom: 26px; }
+.greet .hello { font-family:'Frank Ruhl Libre',serif; font-size:30px; font-weight:700; }
+.greet p { color:#6b6258; font-size:15px; margin-top:8px; max-width:440px; margin-inline:auto; }
+
+.badge {
+  display:inline-block; background:#e7d3bf; color:#8c4427; font-weight:700;
+  padding:6px 18px; border-radius:999px; font-size:13px; letter-spacing:1px; margin-top:14px;
+}
+
+/* טבלת פרטים */
+.details {
+  background:#fff; border:1px solid rgba(42,37,32,.12); border-radius:14px;
+  padding: 8px 24px; margin: 26px 0;
+}
+.row { display:flex; justify-content:space-between; padding:13px 0; border-bottom:1px dashed rgba(42,37,32,.14); }
+.row:last-child { border-bottom:0; }
+.row .k { color:#6b6258; font-size:14px; }
+.row .v { font-weight:700; font-size:15px; }
+.row .v.ok { color:#6f7a5a; }
+
+/* קישור + QR */
+.access {
+  display:flex; align-items:center; gap:24px; background:#1e2230; color:#f5eee0;
+  border-radius:14px; padding:24px 26px; margin-bottom: 24px;
+}
+.access .qr { background:#fff; padding:8px; border-radius:10px; flex:0 0 auto; }
+.access .qr img { display:block; width:118px; height:118px; }
+.access .txt h3 { font-family:'Frank Ruhl Libre',serif; font-size:20px; color:#fff; margin-bottom:6px; }
+.access .txt p { font-size:13px; color:#cfc7ba; line-height:1.6; }
+.access .link {
+  display:inline-block; margin-top:12px; background:#b5623c; color:#fff;
+  padding:11px 24px; border-radius:999px; font-size:14px; font-weight:700;
+  text-decoration:none; letter-spacing:.5px;
+}
+
+/* מה כלול */
+.included h4 { font-family:'Frank Ruhl Libre',serif; font-size:17px; margin-bottom:10px; }
+.inc-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 22px; }
+.inc-grid div { font-size:13.5px; color:#4a443c; padding:3px 0; }
+.inc-grid div::before { content:'✦ '; color:#b5623c; }
+
+/* פוטר */
+.foot {
+  margin-top: 26px; border-top:1px solid rgba(42,37,32,.12);
+  padding: 18px 46px 30px; text-align:center; color:#6b6258; font-size:12px; line-height:1.7;
+}
+.foot strong { color:#2a2520; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="stars"></div>
+    <div class="mark">שׁ</div>
+    <div class="brand">שֹׁרֶשׁ</div>
+    <div class="brand-sub">א ד מ ה · מ י ם · א ו ו י ר</div>
+    <h1>אישור הזמנה רשמי</h1>
+    <div class="conf-line">מחזור קיץ 2026 · ריטריט שלושת היסודות · ערבה תיכונה</div>
+  </div>
+
+  <div class="body">
+
+    <div class="greet">
+      <div class="hello">איילת גולן יקרה,</div>
+      <p>אנו שמחים לאשר את מקומך בריטריט הקרוב. מקומך נשמר באופן אישי — וכל הפרטים שלפנייך כבר מסודרים. כל שנותר הוא להגיע עם לב פתוח.</p>
+      <div class="badge">🎁 הזמנה זו נרכשה עבורך כמתנה</div>
+    </div>
+
+    <div class="details">
+      <div class="row"><span class="k">על שם</span><span class="v">איילת גולן</span></div>
+      <div class="row"><span class="k">מספר אישור</span><span class="v">SHRSH-47-0624</span></div>
+      <div class="row"><span class="k">תאריכי הריטריט</span><span class="v">יום ד׳ – יום א׳ · 4 ימים, 3 לילות</span></div>
+      <div class="row"><span class="k">מיקום</span><span class="v">חוות נווה חריף, ערבה תיכונה</span></div>
+      <div class="row"><span class="k">סוג אירוח</span><span class="v">אוהל גלמפינג פרטי</span></div>
+      <div class="row"><span class="k">סטטוס הזמנה</span><span class="v ok">מאושרת ומאובטחת ✓</span></div>
+      <div class="row"><span class="k">יתרה לתשלום</span><span class="v ok">אין · 0 ₪</span></div>
+    </div>
+
+    <div class="access">
+      <div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&data=https://liron-weunica.github.io/retreat-jun-26/index.html" alt="QR">
+      </div>
+      <div class="txt">
+        <h3>להשלמת ההרשמה ולצפייה בכל הפרטים</h3>
+        <p>סרקי את הקוד או לחצי על הכפתור כדי להיכנס לאתר האישי שלך, שם ממתינים לך התוכנית המלאה, הכנה למסע, ומכתב אישי שצורף להזמנה.</p>
+        <a class="link" href="https://liron-weunica.github.io/retreat-jun-26/index.html">מעבר לאתר ←</a>
+      </div>
+    </div>
+
+    <div class="included">
+      <h4>מה כולל הריטריט</h4>
+      <div class="inc-grid">
+        <div>לינה באוהל גלמפינג פרטי</div>
+        <div>3 ארוחות צמחיות ביום בבישול שף</div>
+        <div>12 סדנאות חווייתיות בקבוצה קטנה</div>
+        <div>עבודת אדמה, מים ואוויר</div>
+        <div>טבילות מינרליות וזמן מנוחה</div>
+        <div>ליווי צוות מנחים מנוסה</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <strong>שֹׁרֶשׁ ריטריטים</strong> · חוות נווה חריף, ערבה תיכונה · טל׳ 6342* · shoresh.retreat@gmail.com<br>
+    מסמך זה מהווה אישור הזמנה אישי. נא לשמור אותו ולהציגו בהגעה. נתראה במדבר ❤️
+  </div>
+
+</div>
+</body>
+</html>

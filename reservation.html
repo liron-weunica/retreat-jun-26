@@ -65,12 +65,37 @@
     <p><strong>נמתחת.</strong> 😄 אין שום ריטריט במדבר, אין אוהל גלמפינג, ואין בריכת בוץ.</p>
     <p>אבל יש משהו הרבה יותר טוב: מישהו שאוהב אותך מספיק כדי לבנות לך אתר שלם רק כדי לראות את הפרצוף שלך עכשיו. 🙃</p>
     <p style="font-family:'Frank Ruhl Libre',serif;font-size:clamp(20px,3vw,28px);color:var(--gold);margin-top:26px">
-      יום הולדת 47 שמח! ❤️<br>המתנה האמיתית מחכה לך — בעולם האמיתי.
+      יום הולדת 47 שמח! ❤️<br>אבל המתנה האמיתית? היא רק מתחילה...
     </p>
-    <p style="font-size:15px;opacity:.8;margin-top:30px">
-      (אדמה, מים ואוויר? פשוט רציתי לראות עד איזה עמוד תגיעי לפני שנפל האסימון.)
+    <p style="font-size:15px;opacity:.8;margin-top:14px">
+      (אדמה, מים ואוויר? פשוט רציתי לראות עד איזה עמוד תגיעי לפני שנפל האסימון 😅)<br>
+      לפנייך מסע קטן של רמזים. מוכנה? 👇
     </p>
-    <a href="index.html" class="btn btn-primary" style="margin-top:24px;background:var(--sand-light);color:var(--ink)">חזרה להתחלה (אם בא לך לעבור על זה שוב 😅)</a>
+
+    <!-- רמז ראשון: וידאו -->
+    <button class="btn btn-primary" id="hint1Btn" onclick="openHint1()"
+            style="margin-top:28px;background:var(--gold);color:var(--ink);font-size:18px">
+      🎬 רמז ראשון — לחצי כאן
+    </button>
+
+    <div id="hint1Video" style="display:none;margin-top:26px">
+      <video id="theVideo" controls playsinline
+             style="width:100%;max-width:540px;border-radius:16px;box-shadow:0 18px 50px -20px rgba(0,0,0,.6)">
+        <source src="video.mp4" type="video/mp4">
+        הדפדפן שלך לא מצליח לנגן את הווידאו. אפשר לפתוח אותו <a href="video.mp4" style="color:var(--gold)">בקישור הזה</a>.
+      </video>
+
+      <!-- רמז שני: כרטיסי טיסה -->
+      <div style="margin-top:30px">
+        <p style="font-size:17px;opacity:.95">קלטת את הרמז הראשון? 😏 אז קדימה — הרמז הבא מחכה:</p>
+        <a href="boarding-pass.html" class="btn btn-primary"
+           style="margin-top:14px;background:var(--terracotta);font-size:18px">✈️ רמז שני ←</a>
+      </div>
+    </div>
+
+    <div style="margin-top:34px">
+      <a href="index.html" style="color:var(--sand-light);opacity:.6;font-size:13px">חזרה להתחלה</a>
+    </div>
   </div>
 
 </div>
@@ -81,6 +106,14 @@ function boom(){
   document.getElementById('bomb').classList.add('show');
   document.getElementById('stage').classList.add('boom');
   launchConfetti();
+}
+function openHint1(){
+  document.getElementById('hint1Btn').style.display='none';
+  var box=document.getElementById('hint1Video');
+  box.style.display='block';
+  var v=document.getElementById('theVideo');
+  try{ v.play(); }catch(e){}
+  box.scrollIntoView({behavior:'smooth',block:'center'});
 }
 function launchConfetti(){
   const colors=['#c9a14a','#b5623c','#6f7a5a','#f5eee0','#a23b59','#fff'];
